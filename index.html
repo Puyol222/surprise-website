@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความลับ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9e5e1;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2.7em;
+            color: #6495ED;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 2em;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            color: #34495e;
+        }
+        video {
+            width: 100%;
+            max-width: 480px; /* กำหนดความกว้างสูงสุดสำหรับหน้าจอใหญ่ */
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .surprise-btn {
+            background-color: #ff7675;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .surprise-btn:hover {
+            background-color: #d63031;
+        }
+        .hidden {
+            display: none;
+        }
+        .large-text {
+            font-size: 2em; /* ขนาดข้อความที่ใหญ่ขึ้น */
+            color: #e74c3c; /* เปลี่ยนสีข้อความได้ตามต้องการ */
+        }
+        iframe {
+            width: 100%;
+            max-width: 500px;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>แพรว! </h1>
+    <p>ลองกดข้างล่างดูสิ 😊</p>
+    <button class="surprise-btn" onclick="showSurprise()">คลิกเพื่อดูเซอร์ไพรส์</button>
+
+    <div id="surpriseContent" class="hidden">
+        <video controls>
+            <source src="surprise-video.mp4" type="video/mp4">
+            วิดีโอของคุณไม่รองรับบนเบราว์เซอร์นี้
+        </video>
+        <h1>พี่ไม่รู้นะว่าน้องชอบไหม</h1>
+        <h2> แต่พี่ตั้งใจทำให้นะ </h2>
+        <h3> พี่ไม่อยากให้น้องเศร้าเลย แต่ก็ทำไม่ได้🥲 </h3>
+        <h3> พี่ขอโทษนะที่ช่วยอะไรไม่ได้เลย พี่อยากอยู่ใกล้ๆน้องมาก </h3>
+        <h3> ถ้าบ้านอยู่ใกล้กันนะจะไปหาเลย แต่อยู่ไกลกันซ่ะได้🥲 </h3>
+        <h4> พี่คงจะบอกได้แค่ว่าสู้ๆนะ แล้วก็พี่ดีใจที่ได้เจอหนูนะะะ สู้ๆๆๆ💪👩‍🦰🫵</h4>
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.querySelector('.surprise-btn').classList.add('hidden');
+            document.getElementById('surpriseContent').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
